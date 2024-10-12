@@ -1,4 +1,4 @@
-/*let x = 10;
+let x = 10;
 let y = 5;
 
 if(x > 20){
@@ -16,4 +16,4 @@ if(y < 10){
 }
 
 let res = x > 8 ? 10 : 100;
-console.log('resultado: ',res);*/
+console.log('resultado: ',res);

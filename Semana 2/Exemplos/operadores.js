@@ -1,4 +1,4 @@
-/*let x = 10;
+let x = 10;
 let y = 20;
 
 let resul  = x + y;
@@ -12,5 +12,5 @@ console.log('Potencia:', power);
 
 console.log('x:', x);
 x++;
-console.log('x:', x);*/
+console.log('x:', x);
 
