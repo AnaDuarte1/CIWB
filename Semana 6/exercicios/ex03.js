@@ -11,34 +11,34 @@ const response = `[
     {"id": 10, "nome": "Ikura", "preco": 31.0000, "estoque": 31}
 ]`;
 
+var vetor = JSON.parse(response);
+var table = document.querySelector("#tabela");
 preencherTabela();
 
-function preencherTabela(){
-    const vetor = JSON.parse(response);
-    let table = document.querySelector('#tabela');
+console.log(document.querySelector(td));
 
-    for(let res of vetor){
-        let tr = document.createElement('tr');
-        let tdId = document.createElement('td');        
-        let tdNome = document.createElement('td');
-        let tdPreco = document.createElement('td');
-
-
-
-        table.appendChild(tr);
-        tr.appendChild(tdId);
-        tr.appendChild(tdNome);
-        tr.appendChild(tdPreco);
-
-        tdId.id = res.id;
-
-        tdId.textContent = res.id;
-        tdNome.textContent = res.nome;
-        tdPreco.textContent = res.preco;
-    }
-}
+removerLinha(2);
 
 function removerLinha(id){
-    td = document.querySelector(id);
-    td.parentElement()
+    tr = document.getElementById(id);
+    parent = tr.parentElement;
+    parent.removeChild(tr);
+}
+
+function preencherTabela(){
+    for(res of vetor){
+        let tr = document.createElement("tr");
+        let tdId = document.createElement("td");
+        let tdProduto = document.createElement("td");
+        let tdPreco = document.createElement("td");
+        table.appendChild(tr);
+        tr.appendChild(tdId);
+        tr.appendChild(tdProduto);
+        tr.appendChild(tdPreco);
+        tdId.textContent = res.id;
+        tdProduto.textContent = res.nome;
+        tdPreco.textContent = res.preco;
+
+        tr.id = res.id;
+    }
 }
