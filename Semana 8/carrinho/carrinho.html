@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinha de Compras</title>
+    <link rel="stylesheet" href="carrinho.css">
+
+</head>
+<body>
+    <div id="header">
+        <h1>Carrinho de Compras</h1>
+        <img src="carrinho.png" id="img">
+    </div>
+
+    <div id="produtos">
+        <h2>Lista de Produtos</h2>
+        <ul>
+            <li>
+                <span>Macarrão</span> - <span class="preco">R$ 10,00</span>
+                <button class="adicionar" data-nome="Produto 1" data-preco="10.00">Adicionar ao carrinho</button>
+            </li>
+            <li>
+                <span>Açucar</span> - <span class="preco">R$ 20,00</span>
+                <button class="adicionar" data-nome="Produto 2" data-preco="20.00">Adicionar ao carrinho</button>
+            </li>
+            <li>
+                <span>Arroz</span> - <span class="preco">R$ 30,00</span>
+                <button class="adicionar" data-nome="Produto 3" data-preco="30.00">Adicionar ao carrinho</button>
+            </li>
+            <li>
+                <span>Oleo</span> - <span class="preco">R$ 9,00</span>
+                <button class="adicionar" data-nome="Produto 4" data-preco="9.00">Adicionar ao carrinho</button>
+            </li>
+            <li>
+                <span>Leite</span> - <span class="preco">R$ 5,00</span>
+                <button class="adicionar" data-nome="Produto 5" data-preco="5.00">Adicionar ao carrinho</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="carrinho">
+        <h2>Carrinho de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="itens-carrinho"></tbody>
+        </table>
+        <button id="esvaziar">Esvaziar Carrinho</button>
+    </div>
+
+    <div id="resumo">
+        <h2>Resumo da Compra</h2>
+        <table>
+            <tr>
+                <td>Total:</td>
+                <td>R$ <span id="total">0,00</span></td>
+            </tr>
+            <tr>
+                <td>Quantidade de Itens:</td>
+                <td><span id="quantidade-itens">0</span></td>
+            </tr>
+        </table>
+    </div>
+        <script src="carrinho.js"></script>
+
+</body>
+</html>
